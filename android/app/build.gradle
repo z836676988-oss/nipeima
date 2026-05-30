@@ -8,6 +8,10 @@ android {
 
     namespace "com.nipeima"
 
+    buildFeatures {
+        buildConfig true
+    }
+
     defaultConfig {
         applicationId "com.nipeima"
         minSdkVersion rootProject.ext.minSdkVersion
