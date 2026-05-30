@@ -23,3 +23,15 @@ allprojects {
         maven { url 'https://www.jitpack.io' }
     }
 }
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty("android")) {
+            android {
+                buildFeatures {
+                    buildConfig = true
+                }
+            }
+        }
+    }
+}
